@@ -207,6 +207,99 @@ Language-specific linters/formatters are noted in each repo's README or config f
 
 ---
 
+## Global To-Do List
+
+Central task tracker shared by Jack and all agents. Lives at `The Hub/GLOBAL_TODO.md`.
+
+### Item Format
+
+```
+- [ ] 🟡 Task description — @owner (YYYY-MM-DD)
+```
+
+**Components:**
+- `[ ]` — Checkbox (unchecked) or `[x]` (done)
+- Priority emoji — see below
+- Description — what needs doing
+- `@owner` — who's responsible
+- Date — when added
+
+### Priority Levels
+
+| Emoji | Level | Meaning |
+|-------|-------|---------|
+| 🔴 | Urgent | Needs attention today |
+| 🟡 | Normal | This week |
+| 🟢 | Low | When time permits |
+| ⚪ | Someday | Ideas, wishes, no timeline |
+
+### Owners
+
+| Tag | Who |
+|-----|-----|
+| `@jack` | Jack (human) |
+| `@henry` | Henry (Clawdbot main agent) |
+| `@quincy` | Quincy (bug bounty agent) |
+| `@alfred` | Alfred (code review agent) |
+| `@any` | Whoever gets to it first |
+| `@unassigned` | Needs assignment |
+
+### Sections
+
+| Section | Purpose |
+|---------|---------|
+| **Active Tasks** | Current work in progress |
+| **Projects** | Larger efforts with sub-tasks |
+| **Ideas & Wishes** | Someday/maybe, no commitment |
+| **Completed** | Recently finished (delete after 7 days) |
+
+### Maintenance Rules
+
+**Adding items:**
+- Use the standard format
+- Add to appropriate section
+- Include date added
+
+**Completing items:**
+1. Check the box: `- [x]`
+2. Move to Completed section
+3. Add completion date
+4. Delete after 7 days (or archive if significant)
+
+**Projects:**
+- Use H3 header (`###`) for project name
+- Include Status, Lead, and Est (estimate)
+- List sub-tasks as checkboxes
+- Link to detailed docs if they exist
+
+```markdown
+### Project Name
+**Status:** Planning | **Lead:** @owner | **Est:** X weeks
+
+- [ ] Sub-task 1
+- [ ] Sub-task 2
+
+**Docs:** `path/to/docs`
+```
+
+### Sync Protocol
+
+- Jack edits directly in Obsidian
+- Agents read/write via file operations
+- No locking — last write wins
+- Keep edits small and atomic
+- If conflicts arise, discuss and merge manually
+
+### Agent Guidelines
+
+- Update during heartbeats or when completing work
+- Check for new assignments at session start
+- Mark items complete when done (don't leave stale checkboxes)
+- Add new items discovered during work
+- Respect priority levels — 🔴 items first
+
+---
+
 ## Issues
 
 When opening an issue:
