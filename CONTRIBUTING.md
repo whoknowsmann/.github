@@ -1,6 +1,6 @@
 # Contributing to whoknowsmann Projects
 
-Thanks for your interest in contributing! This guide covers the conventions and standards used across all repositories in this org.
+Conventions and standards for all repositories in this org.
 
 ---
 
@@ -225,4 +225,4 @@ Unless otherwise specified, projects are released under the license stated in th
 
 ## Questions?
 
-Open an issue or reach out directly. We appreciate your contributions! 🙌
+Open an issue.
